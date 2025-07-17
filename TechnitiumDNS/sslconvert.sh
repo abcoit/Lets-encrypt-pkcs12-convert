@@ -23,4 +23,4 @@ EOM
 chmod +x /etc/letsencrypt/renewal-hooks/deploy/convert_PKCS12.sh
 
 # Run the script manually for the first time to generate the initial .pfx file
-/etc/letsencrypt/renewal-hooks/deploy/converts_PKCS12.sh
+/etc/letsencrypt/renewal-hooks/deploy/convert_PKCS12.sh
