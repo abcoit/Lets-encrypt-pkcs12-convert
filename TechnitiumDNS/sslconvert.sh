@@ -15,7 +15,7 @@ read PFX_PASSWORD
 # Write the .sh file
 /bin/cat <<EOM >/etc/letsencrypt/renewal-hooks/deploy/convert_PKCS12.sh
 #!/bin/sh
-openssl pkcs12 -export -out $OUTPUT_FILEPATH-inkey /etc/letsencrypt/live/$KEY_DOMAIN/privkey.pem -in /etc/letsencrypt/live/$KEY_DOMAIN/cert.pem -certfile /etc/letsencrypt/live/$KEY_DOMAIN/chain.pem -passout pass:$PFX_PASSWORD
+openssl pkcs12 -export -out $OUTPUT_FILEPATH -inkey /etc/letsencrypt/live/$KEY_DOMAIN/privkey.pem -in /etc/letsencrypt/live/$KEY_DOMAIN/cert.pem -certfile /etc/letsencrypt/live/$KEY_DOMAIN/chain.pem -passout pass:$PFX_PASSWORD
 echo "PKCS12 file written"
 EOM
 
